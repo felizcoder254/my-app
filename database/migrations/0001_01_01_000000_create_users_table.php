@@ -17,7 +17,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->boolean('is_subscribed')->default(false);
-            $table->string('subscription_type')->nullable();
             $table->string('mpesa_checkout_id')->nullable();
             $table->string('subscription_type')->default('Free');
 
