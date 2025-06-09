@@ -1,4 +1,4 @@
-# Laravel & Editor
+# ─── Laravel & Editor ───────────────────────────────────────────────
 *.log
 .DS_Store
 .env
@@ -9,7 +9,7 @@
 Homestead.json
 Homestead.yaml
 
-# IDEs & editor folders
+# IDE & Editor folders
 /.fleet
 /.idea
 /.nova
@@ -27,22 +27,19 @@ yarn-error.log*
 /public/build
 /public/hot
 
-# Storage keys and private files
-/storage/*.key
-/storage/pail
-
-# Don’t ignore our public storage symlink
-# (needed so public/storage → storage/app/public is included)
-/public/storage
+# We want to track our public storage symlink
+!/public/storage
 
 # Vendor libraries
 /vendor
 
-# ─── Storage ────────────────────────────────────────────────
+# ─── Storage ────────────────────────────────────────────────────────
 # Ignore everything under storage/app...
 /storage/app/*
-# …except storage/app/public (we want these in Git)
+# …except storage/app/public (we want these files in Git)
 !/storage/app/public
 
-# Thumbnails, caches, OS files
+# OS files, caches, thumbnails
+/storage/*.key
+/storage/pail
 Thumbs.db

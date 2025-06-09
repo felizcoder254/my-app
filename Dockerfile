@@ -53,6 +53,6 @@ RUN php artisan storage:link
 # Ensure Laravel uses the public/ folder
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 
-# On container start: run migrations then launch Apache in foreground
+# On container start: run migrations, cache config, then launch Apache
 ENTRYPOINT ["sh","-c"]
-CMD ["php artisan migrate --force && apache2-foreground"]
+CMD ["php artisan migrate --force && php artisan config:cache && apache2-foreground"]
