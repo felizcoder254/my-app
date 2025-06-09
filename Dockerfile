@@ -21,7 +21,8 @@ COPY --from=assets-builder /app /app
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # ─── Stage 3: Runtime (PHP + Apache) ───────────────────
-FROM php:8.1-apache
+FROM php:8.2-apache
+
 
 # Enable required PHP extensions
 RUN apt-get update \
