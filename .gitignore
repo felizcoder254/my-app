@@ -1,3 +1,4 @@
+# Laravel & Editor
 *.log
 .DS_Store
 .env
@@ -5,22 +6,43 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# IDEs & editor folders
 /.fleet
 /.idea
 /.nova
 /.phpunit.cache
 /.vscode
 /.zed
+
+# Composer & NPM
 /auth.json
 /node_modules
+npm-debug.log*
+yarn-error.log*
+
+# Build artifacts
 /public/build
 /public/hot
-/public/storage
+
+# Storage keys and private files
 /storage/*.key
 /storage/pail
+
+# Don’t ignore our public storage symlink
+# (needed so public/storage → storage/app/public is included)
+/public/storage
+
+# Vendor libraries
 /vendor
-Homestead.json
-Homestead.yaml
-npm-debug.log
+
+# ─── Storage ────────────────────────────────────────────────
+# Ignore everything under storage/app...
+/storage/app/*
+# …except storage/app/public (we want these in Git)
+!/storage/app/public
+
+# Thumbnails, caches, OS files
 Thumbs.db
-yarn-error.log
