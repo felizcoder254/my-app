@@ -43,3 +43,11 @@ yarn-error.log*
 /storage/*.key
 /storage/pail
 Thumbs.db
+
+# ─── Storage ────────────────────────────────────────────────────────
+# Ignore everything under storage/app...
+/storage/app/*
+
+# Except storage/app/public and ALL its contents
+!/storage/app/public
+!/storage/app/public/**
