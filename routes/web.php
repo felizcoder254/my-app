@@ -145,3 +145,10 @@ Route::get('/chat/{room}/messages', function($room) {
 Route::delete('/chat/{room}/clear', [ChatController::class, 'clear']);
 
 
+Route::get('/debug-files', function () {
+    // Lists all files under storage/app/public/nck
+    $files = Storage::disk('public')->allFiles('nck');
+    return response()->json($files);
+});
+
+
