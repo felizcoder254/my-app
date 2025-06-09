@@ -47,6 +47,9 @@ RUN chown -R www-data:www-data /var/www/html \
  && find /var/www/html -type f -exec chmod 644 {} \; \
  && find /var/www/html -type d -exec chmod 755 {} \;
 
+# Create storage symlink for public access to storage/app/public
+RUN php artisan storage:link
+
 # Ensure Laravel uses the public/ folder
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 
